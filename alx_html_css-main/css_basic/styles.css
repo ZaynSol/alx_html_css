@@ -1,0 +1,62 @@
+body, main {
+    display: flex;
+}
+
+header{
+    text-align: right;
+    margin: 10px;
+}
+
+body{
+    flex-direction: column;
+}
+
+main {
+    flex-direction: row;
+    flex: auto;
+    background-color: #164ae8;
+    border-radius: 25px;
+}
+
+h1{
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+h2, h3{
+    color: #fff;
+    text-decoration: underline;
+}
+
+table{
+    border: 2px solid #000;
+    text-align: center;
+    width: 15rem;
+    height: 10rem;
+}
+
+td, th{
+    border: 1px solid #000;
+}
+
+thead{
+    font-weight: 700;
+    text-align: center;
+}
+
+article {
+    flex: 2;
+    overflow-y: auto;
+}
+
+aside {
+    flex: 1;
+    overflow-y: auto;
+    background-color: ;
+}
+
+footer {
+    align-self: center;
+    padding-top: 20px;
+}
