@@ -1,0 +1,282 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(/css_advanced/Fonts/SourceSansPro-Regular.otf);
+}
+@font-face {
+    font-family: 'Spin-Cycle-OT';
+    src: url(/css_advanced/Fonts/spincycle_ot.otf);
+}
+
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: none;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 1400px;
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    background-image: url(./images/headphones_hero_1.jpg);
+    background-position: cover;
+    background-repeat: no-repeat;
+  
+}
+/*Mobile screen styling*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 247px;
+    height: auto;
+    margin: 29px 21px 0;
+}
+.navbar-links ul {
+    display: none;
+}
+nav img {
+    width: 161px;
+    height: 32px;
+    margin-left: 66px;
+}
+
+#toggle-button {
+    display: none;
+}
+.check-btn .fa-bars {
+    display: block;
+}
+.check-btn .fa-times{  /* Hide the "X" icon by default */
+    display: none;
+}
+#toggle-button:checked + .check-btn .fa-bars { /* When the checkbox is checked, hide the hamburger icon */
+    display: none;
+}
+#toggle-button:checked + .check-btn .fa-times { /* When the checkbox is checked, show the "X" icon */
+    display: block;
+}
+
+#toggle-button:checked ~ .navbar-links ul{ /* When the checkbox is checked, show the navigation menu */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.navbar-links ul {   /* Style for menu items in the mobile view */
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    list-style-type: none;
+}
+
+.navbar-links a {
+    padding: 1rem 1.5rem;
+    display: block;
+}
+.navbar-links a:hover {
+    color: #FF6565;
+}
+.main-part {
+    display: flex;
+    flex-direction: column;
+    margin: 266px auto 106px auto;
+    width: 357px;
+    height: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.main-part button {
+    margin-top: 20px;
+    margin-bottom: 65px;
+    width: 162px;
+    height: 44px;
+    background-color: #FF6565;
+    border-radius: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+}
+.lorem-p1 {
+    width: 279px;
+    height: auto;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.lorem-p2 {
+    padding-left: 11px;
+    padding-right: 11px;
+}
+.main-part h1 {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.What-we-do {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.part_1{
+    width: 325px;
+    height: auto;
+    text-align: center;
+   /*border: 1px solid black;*/
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin-top: 110px;;
+}
+
+.part_1 p, .part_2 p {
+    color: #071629;
+}
+
+.part_1 h2, .part_2 h3{
+    color: #071629;
+}
+
+.part_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 207px;
+   /* border: 1px solid black;*/
+    margin: 110px auto;
+    /*row-gap: 96px;*/
+}
+
+.what-we-do-item {
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    width: 100%;
+    justify-content: space-around;
+    height: auto;
+    margin-bottom: 96px;
+}
+
+.what-we-do-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.what-we-do-item:first-child img{
+    margin-bottom: 23.62px;
+}
+.what-we-do-item:nth-child(2) img{
+    margin-bottom: 25.2px;
+    
+}
+.what-we-do-item:nth-child(3) img{
+    margin-bottom: 30.73px;
+}
+.what-we-do-item:last-child img{
+    margin-bottom: 27.56px;
+}
+.what-we-do-item h3, .what-we-do-item p {
+    text-align: center;
+}
+
+.what-we-do-item p {
+    font-size: 14px;
+    margin-top: 13px;
+}
+
+
+/*Tablet screen styling*/
+@media  screen and (min-width: 600px) {
+    nav{
+        flex-wrap: wrap;
+        width: 633px;
+        margin: 29px auto;
+        flex: 1 1 100%;
+        justify-content: space-between;
+    }
+    .toggle-button {
+        display: none;
+    }
+    .check-btn {
+        display: none;
+    }
+    #toggle-button:checked ~ .navbar-links ul {
+        display: none;
+    }
+
+    .navbar-links ul{
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        width: 255px;
+        height: 15px;
+        position: static;
+    }
+    nav img {
+        margin-left: 0;
+    }
+    
+    .navbar-links a  {
+        font-size: 12px;
+        font-weight: bold;
+        display: inline;
+        padding: 0;
+    }
+    .main-part {
+        flex: 1 1 auto;
+        margin: 311px auto 115px ;
+        min-width: 637px;
+    }
+    .lorem-p1 {
+        width: 100%;
+    }
+    .main-part button {
+        margin-top: 40px;
+    }
+    
+    .lorem-p2 {
+        padding: 0;
+    }
+
+    .part_1{
+        margin: 110px auto 96px auto;
+        width: 637px;
+        flex: 1 1 auto;
+    }
+    .part_2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 472px;
+        height: 469px;
+        row-gap: 97px;
+        column-gap: 58px;
+        margin-top: 0;
+    }
+    .what-we-do-item {
+        margin-bottom: 0;
+    }
+}
+/*Desktop screen styling*/
+@media screen and (min-width: 1200px) {
+    nav{
+        min-width: 1000px;
+        margin: 27.12px auto;
+        flex: 1 1 100%;
+    }
+
+    .part_2 {
+        display: flex;
+        flex-direction: row;
+        width: 1002px;
+        height: 193px;
+    }
+}

@@ -1,0 +1,427 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(/Fonts/SourceSansPro-Regular.otf);
+}
+@font-face {
+    font-family: 'Spin-Cycle-OT';
+    src: url(/Fonts/spincycle_ot.otf);
+}
+
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: none;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 1400px;
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    background-image: url(./images/headphones_hero_1.jpg);
+    background-repeat: no-repeat;
+}
+/*Mobile screen styling*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 247px;
+    height: auto;
+    margin: 29px 21px 0;
+}
+.navbar-links ul {
+    display: none;
+}
+nav img {
+    width: 161px;
+    height: 32px;
+    margin-left: 66px;
+}
+
+#toggle-button {
+    display: none;
+}
+.check-btn .fa-bars {
+    display: block;
+}
+.check-btn .fa-times{  /* Hide the "X" icon by default */
+    display: none;
+}
+#toggle-button:checked + .check-btn .fa-bars { /* When the checkbox is checked, hide the hamburger icon */
+    display: none;
+}
+#toggle-button:checked + .check-btn .fa-times { /* When the checkbox is checked, show the "X" icon */
+    display: block;
+}
+
+#toggle-button:checked ~ .navbar-links ul{ /* When the checkbox is checked, show the navigation menu */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.navbar-links ul {   /* Style for menu items in the mobile view */
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    list-style-type: none;
+}
+
+.navbar-links a {
+    padding: 1rem 1.5rem;
+    display: block;
+}
+.navbar-links a:hover {
+    color: #FF6565;
+}
+.main-part {
+    display: flex;
+    flex-direction: column;
+    margin: 266px auto 106px auto;
+    width: 357px;
+    height: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.main-part button {
+    margin-top: 20px;
+    margin-bottom: 65px;
+    width: 162px;
+    height: 44px;
+    background-color: #FF6565;
+    border-radius: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+}
+.lorem-p1 {
+    width: 279px;
+    height: auto;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.lorem-p2 {
+    padding-left: 11px;
+    padding-right: 11px;
+}
+.main-part h1 {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.What-we-do {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.part_1{
+    width: 325px;
+    height: auto;
+    text-align: center;
+   /*border: 1px solid black;*/
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin-top: 110px;;
+}
+
+.part_1 p, .part_2 p {
+    color: #071629;
+}
+
+.part_1 h2, .part_2 h3{
+    color: #071629;
+}
+
+.part_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 207px;
+   /* border: 1px solid black;*/
+    margin: 110px auto;
+    /*row-gap: 96px;*/
+}
+
+.what-we-do-item {
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    width: 100%;
+    justify-content: space-around;
+    height: auto;
+    margin-bottom: 96px;
+}
+
+.what-we-do-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.what-we-do-item:first-child img{
+    margin-bottom: 23.62px;
+}
+.what-we-do-item:nth-child(2) img{
+    margin-bottom: 25.2px;
+    
+}
+.what-we-do-item:nth-child(3) img{
+    margin-bottom: 30.73px;
+}
+.what-we-do-item:last-child img{
+    margin-bottom: 27.56px;
+}
+.what-we-do-item h3, .what-we-do-item p {
+    text-align: center;
+}
+
+.what-we-do-item p {
+    font-size: 14px;
+    margin-top: 13px;
+}
+
+.our-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/headphones_hero_2.jpg);
+    background: linear-gradient(to bottom, rgba(16, 25, 41, 0.43) 43%, rgba(7, 22, 41, 1) 100%), url('images/headphones_hero_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.our-results div h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 110px;
+    margin-bottom: 40px;
+    width: 266px;
+}
+
+.our-results div p {
+    text-align: center;
+    margin-bottom: 77px;
+    width: 305px;
+    justify-content: space-around;
+}
+
+.dots {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 69px;
+}
+
+.pentagon {
+    position: relative;
+    width: 190px;
+    height: auto;
+   margin-bottom: 42px;
+}
+
+
+.pentagon img {
+    width: 100%;
+} 
+
+.pentagon-text {
+    position: absolute;
+    top: 69px;
+    left: 39px;
+    width: 112px;
+}
+
+.pentagon-text span {
+    display: block;
+    text-align: center;
+}
+
+.pentagon-text span:first-of-type {
+    font-weight: bold;
+    font-size: 46px;
+}
+
+.pentagon-text span:nth-last-of-type(1) {
+    font-size: 14px;
+}
+
+/*styles for the contact form */
+.contact-form {
+    margin: 110px auto;
+    width: 335px;
+    height: 373px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+.contact-form h1 {
+    margin-bottom: 56px;
+    color: #071629;
+}
+
+.form-group {
+    margin-bottom: 45px;
+    width: 100%;
+    box-shadow: #979797;
+    /*border: 1px solid black;*/
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+#username, #email, #textarea {
+    width: 100%;
+    height: 29px;
+   /* border: none;*/
+    box-shadow: #979797;
+}
+
+.contact-form button {
+    padding: 13px;
+    background-color: #FF6565;
+    width: 162px;
+    height: 44px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 22px;
+    margin-top: 56px;
+    margin-bottom: 130px;
+    border: none;
+}
+
+.form-group #username::placeholder, .form-group #email::placeholder, .form-group #textarea::placeholder {
+    color: #071629 ;
+} 
+
+/*Tablet screen styling*/
+@media  screen and (min-width: 600px) {
+    nav{
+        flex-wrap: wrap;
+        width: 633px;
+        margin: 29px auto;
+        flex: 1 1 100%;
+        justify-content: space-between;
+    }
+    .toggle-button {
+        display: none;
+    }
+    .check-btn {
+        display: none;
+    }
+    #toggle-button:checked ~ .navbar-links ul {
+        display: none;
+    }
+
+    .navbar-links ul{
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        width: 255px;
+        height: 15px;
+        position: static;
+    }
+    nav img {
+        margin-left: 0;
+    }
+    
+    .navbar-links a  {
+        font-size: 12px;
+        font-weight: bold;
+        display: inline;
+        padding: 0;
+    }
+    .main-part {
+        flex: 1 1 auto;
+        margin: 311px auto 115px ;
+        min-width: 637px;
+    }
+    .lorem-p1 {
+        width: 100%;
+    }
+    .main-part button {
+        margin-top: 40px;
+    }
+    
+    .lorem-p2 {
+        padding: 0;
+    }
+
+    .part_1{
+        margin: 110px auto 96px auto;
+        width: 637px;
+        flex: 1 1 auto;
+    }
+    .part_2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 472px;
+        height: 469px;
+        row-gap: 97px;
+        column-gap: 58px;
+        margin-top: 0;
+    }
+    .what-we-do-item {
+        margin-bottom: 0;
+    }
+    .our-results div h2 {
+        width: 500px;
+        justify-content: space-around;
+    }
+    .our-results div p {
+        width: 637px;
+    }
+    .dots {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 42px;
+        column-gap: 76px;
+        width: 456px;
+        height: 422px;
+        margin-bottom: 43px;
+    }
+    .pentagon {
+        margin-bottom: 0;
+    }
+    .contact-form {
+        margin-bottom: 130px;
+    }
+}
+/*Desktop screen styling*/
+@media screen and (min-width: 1200px) {
+    nav{
+        min-width: 1000px;
+        margin: 27.12px auto;
+        flex: 1 1 100%;
+    }
+
+    .part_2 {
+        display: flex;
+        flex-direction: row;
+        width: 1002px;
+        height: 193px;
+    }
+    .our-results div p {
+        margin-bottom: 56px;
+    }
+    .dots {
+        display: flex;
+        flex-direction: row;
+        width: 988px;
+        height: 190px;
+        margin-bottom: 79px;
+    }
+}
