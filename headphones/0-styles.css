@@ -7,178 +7,196 @@
   src: url(/css_advanced/Fonts/spincycle_ot.otf);
 }
 
+/* Reset */
 * {
-  font-family: "Source Sans Pro", sans-serif;
-  background: none;
-  color: #fff;
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  max-width: 1400px;
+  font-family: "Source Sans Pro", sans-serif;
   text-decoration: none;
   color: #fff;
 }
 
+/* Body background */
 body {
   background-image: url(./images/headphones_hero_1.jpg);
-  background-position: cover;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
-/*Mobile screen styling*/
-nav {
+
+/* Container max width */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  min-width: 247px;
-  height: auto;
-  margin: 29px 21px 0;
+  justify-content: space-between;
+  height: 80px;
+  position: relative;
 }
-.navbar-links ul {
-  display: none;
-}
-nav img {
+
+/* Logo */
+.logo {
   width: 161px;
   height: 32px;
-  margin-left: 66px;
 }
 
-#toggle-button {
-  display: none;
-}
-.check-btn .fa-bars {
-  display: block;
-}
-.check-btn .fa-times {
-  /* Hide the "X" icon by default */
-  display: none;
-}
-#toggle-button:checked + .check-btn .fa-bars {
-  /* When the checkbox is checked, hide the hamburger icon */
-  display: none;
-}
-#toggle-button:checked + .check-btn .fa-times {
-  /* When the checkbox is checked, show the "X" icon */
-  display: block;
-}
-
-#toggle-button:checked ~ .navbar-links ul {
-  /* When the checkbox is checked, show the navigation menu */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+/* Navigation */
 .navbar-links ul {
-  /* Style for menu items in the mobile view */
-  position: absolute;
-  top: 70px;
-  left: 100px;
-  list-style-type: none;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
 }
 
 .navbar-links a {
-  padding: 1rem 1.5rem;
-  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: lowercase;
+  transition: color 0.3s ease;
 }
-.navbar-links a:hover {
+
+.navbar-links a:hover,
+.navbar-links a:active {
   color: #ff6565;
 }
+
+/* Hamburger */
+#toggle-button {
+  display: none;
+}
+
+.check-btn {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
+  user-select: none;
+}
+
+.check-btn .fa-bars {
+  display: block;
+}
+
+.check-btn .fa-times {
+  display: none;
+}
+
+#toggle-button:checked + .check-btn .fa-bars {
+  display: none;
+}
+
+#toggle-button:checked + .check-btn .fa-times {
+  display: block;
+}
+
+/* Hero content */
 .main-part {
-  display: flex;
-  flex-direction: column;
+  max-width: 357px;
   margin: 266px auto 106px auto;
-  width: 357px;
-  height: auto;
   text-align: center;
-  align-items: center;
+}
+
+.main-part h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.lorem-p1 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
 .main-part button {
-  margin-top: 20px;
-  margin-bottom: 65px;
-  width: 162px;
-  height: 44px;
   background-color: #ff6565;
   border-radius: 22px;
-  text-transform: uppercase;
+  border: none;
+  width: 162px;
+  height: 44px;
   font-weight: bold;
   font-size: 14px;
-  border: none;
-}
-.lorem-p1 {
-  width: 279px;
-  height: auto;
-  margin: 0 auto;
-  font-weight: bold;
-}
-.lorem-p2 {
-  padding-left: 11px;
-  padding-right: 11px;
-}
-.main-part h1 {
-  width: 100%;
-  font-size: 2rem;
-  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+  margin-bottom: 65px;
+  transition: opacity 0.3s ease;
 }
 
-/*Tablet screen styling*/
-@media screen and (min-width: 600px) {
-  nav {
-    flex-wrap: wrap;
-    width: 633px;
-    margin: 29px auto;
-    flex: 1 1 100%;
-    justify-content: space-between;
+.main-part button:hover,
+.main-part button:active {
+  opacity: 0.9;
+}
+
+.lorem-p2 {
+  padding: 0 11px;
+  font-size: 0.9rem;
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  /* Container flex center */
+  .container {
+    justify-content: center;
   }
-  .toggle-button {
-    display: none;
+
+  /* Logo center */
+  .logo {
+    margin: 0 auto;
   }
-  .check-btn {
+
+  /* Hide nav links */
+  .navbar-links {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
     display: none;
-  }
-  #toggle-button:checked ~ .navbar-links ul {
-    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    animation: fadeIn 0.3s ease forwards;
   }
 
   .navbar-links ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: space-around;
-    width: 255px;
-    height: 15px;
-    position: static;
-  }
-  nav img {
-    margin-left: 0;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .navbar-links a {
-    font-size: 12px;
-    font-weight: bold;
-    display: inline;
-    padding: 0;
-  }
-  .main-part {
-    flex: 1 1 auto;
-    margin: 311px auto 115px;
-    min-width: 637px;
-  }
-  .lorem-p1 {
-    width: 100%;
-  }
-  .main-part button {
-    margin-top: 40px;
+    font-size: 18px;
   }
 
-  .lorem-p2 {
-    padding: 0;
+  /* Show hamburger */
+  .check-btn {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+
+  /* Show nav when checked */
+  #toggle-button:checked ~ .navbar-links {
+    display: flex;
+  }
+
+  /* Main part margin for mobile */
+  .main-part {
+    margin: 140px auto 50px auto;
+    width: 90%;
+    max-width: 350px;
   }
 }
-/*Desktop screen styling*/
-@media screen and (min-width: 1200px) {
-  nav {
-    min-width: 1000px;
-    margin: 27.12px auto;
-    flex: 1 1 100%;
+
+/* Tablet and up */
+@media (min-width: 481px) {
+  .check-btn {
+    display: none;
   }
 }
